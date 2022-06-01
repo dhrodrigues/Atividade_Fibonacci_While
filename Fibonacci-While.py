@@ -1,17 +1,28 @@
-termos = int(input("Qual numero termo?\n"))
+termos = int(input("Informe quantos termos da sequencia Fibonacci deseja?\n"))
 
-x = 0
-y = 1
-contador = 0
+while(termos !=0):
+    x = 0
+    y = 1
+    contador = 0
 
-if termos <= 0:
-    print("Finalizado")
+    if termos == 1:
+        print("\n",x)
 
-else:
-    print("\nSequencia Fibonacci:")
-    while (contador < termos):
-        print(x)
-        z = x + y
-        x = y
-        y = z
-        contador += 1
+    elif termos == 2:
+        print("\n",x,"\n",y)
+
+    elif termos == 3:
+        print("\n",x,"\n",y,"\n",x+y)
+
+    else:
+        print("\nSequencia Fibonacci:")
+
+        while (contador < termos):
+            print(x)
+            z = x + y
+            x = y
+            y = z
+            contador += 1
+
+    termos = int(input("Digite qual a nova sequencia Fibonacci. Caso digite 0 sera encerrado o codigo\n"))
+print("Tchau obrigado por utilizar esse Script")
